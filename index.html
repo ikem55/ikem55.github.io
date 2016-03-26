@@ -43,7 +43,9 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
 
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
   <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="/js/highchartssetting.js"></script>
 
   <script>hljs.initHighlightingOnLoad();</script>
   
@@ -300,7 +302,7 @@
   </header>
 
   <p>
-  見出し Werckerの自動デプロイがうまくいかないので、暫定で手動デプロイする手順。 cd Sites hugo -t Blackburn cd public git add -A git commit git push 参考URL http://ureta.net/2015/05/hugo-on-windows/ http://tanksuzuki.com/post/hugo-github-pages-2/ http://tanksuzuki.com/post/hugo-github-pages-1/ test タグを追加してみたが。。。
+  見出し Werckerの自動デプロイがうまくいかないので、暫定で手動デプロイする手順。 cd Sites hugo -t blackburn cd public git add -A git commit git push 参考URL: http://ureta.net/2015/05/hugo-on-windows/ http://tanksuzuki.com/post/hugo-github-pages-2/ http://tanksuzuki.com/post/hugo-github-pages-1/ ローカルで確認する方法 hugo server -t blackburn -D -w highchartsの表示テスト Highchartsを呼び出すテスト。 テンプレートのhead.htmlに以下を追加 &lt;!-- add my sciprt --&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;/js/highchartssetting.js&quot;&gt;&lt;/script&gt;
   </p>
 
   

@@ -43,7 +43,9 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
 
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
   <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="/js/highchartssetting.js"></script>
 
   <script>hljs.initHighlightingOnLoad();</script>
   
@@ -269,27 +271,39 @@
 
 <p>Werckerの自動デプロイがうまくいかないので、暫定で手動デプロイする手順。</p>
 
-<ol>
-<li>cd Sites</li>
-<li>hugo -t Blackburn</li>
-<li>cd public</li>
-<li>git add -A</li>
-<li>git commit</li>
-<li>git push</li>
-</ol>
+<pre><code>cd Sites
+hugo -t blackburn
+cd public
+git add -A
+git commit
+git push
+</code></pre>
 
-<p>参考URL
-<a href="http://ureta.net/2015/05/hugo-on-windows/">http://ureta.net/2015/05/hugo-on-windows/</a></p>
+<p>参考URL:</p>
+
+<p><a href="http://ureta.net/2015/05/hugo-on-windows/">http://ureta.net/2015/05/hugo-on-windows/</a></p>
 
 <p><a href="http://tanksuzuki.com/post/hugo-github-pages-2/">http://tanksuzuki.com/post/hugo-github-pages-2/</a></p>
 
 <p><a href="http://tanksuzuki.com/post/hugo-github-pages-1/">http://tanksuzuki.com/post/hugo-github-pages-1/</a></p>
 
-<h2 id="test:6083a88ee3411b0d17ce02d738f69d47">test</h2>
+<h2 id="ローカルで確認する方法:6083a88ee3411b0d17ce02d738f69d47">ローカルで確認する方法</h2>
 
-<p>タグを追加してみたが。。。</p>
+<pre><code>hugo server -t blackburn -D -w
+</code></pre>
 
-<div id="container" style="width:100%; height:400px;"></div>
+<h2 id="highchartsの表示テスト:6083a88ee3411b0d17ce02d738f69d47">highchartsの表示テスト</h2>
+
+<p>Highchartsを呼び出すテスト。
+テンプレートのhead.htmlに以下を追加</p>
+
+<pre><code>&lt;!-- add my sciprt --&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/js/highchartssetting.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<div id="highcharts_container" style="width:100%; height:400px;"></div>
 
 
   
