@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/</loc>
-    <lastmod>2016-03-18T08:46:49+09:00</lastmod>
+    <loc>http://ikem55.github.io/</loc>
+    <lastmod>2016-03-26T10:30:06+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/post/about/</loc>
+    <loc>http://ikem55.github.io/post/20160326test/</loc>
+    <lastmod>2016-03-26T10:30:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ikem55.github.io/post/about/</loc>
     <lastmod>2016-03-18T08:46:49+09:00</lastmod>
   </url>
   
