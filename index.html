@@ -43,9 +43,13 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
 
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="http://code.highcharts.com/highcharts.js"></script>
   <script src="/js/highchartssetting.js"></script>
+  <script src="/js/jquery.columns.min.js"></script>
+  <script src="/js/columns.js"></script>
+  <link rel="stylesheet" href="/css/classic.css">
+
 
   <script>hljs.initHighlightingOnLoad();</script>
   
@@ -66,7 +70,7 @@
 <div id="menu">
 
   
-  <a class="pure-menu-heading brand" href="/">Blackburn</a>
+  <a class="pure-menu-heading brand" href="/">ikemkeiba</a>
 
 
   <div class="pure-menu">
@@ -84,18 +88,6 @@
       
         </li>
       
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
-      
-        </li>
-      
     </ul>
   </div>
 
@@ -110,118 +102,50 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://twitter.com/*" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
-    </li>
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://facebook.com/*" target="_blank"><i class="fa fa-facebook-square fa-fw"></i>Facebook</a>
-    </li>
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://plus.google.com/+*" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
-    </li>
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="http://weibo.com/*" target="_blank"><i class="fa fa-weibo fa-fw"></i>Weibo</a>
+      <a class="pure-menu-link" href="https://twitter.com/ikemkeiba" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
 
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://instagram.com/*" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
-    </li>
-    
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://flickr.com/photos/*" target="_blank"><i class="fa fa-flickr fa-fw"></i>Flickr</a>
-    </li>
-    
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://pinterest.com/*" target="_blank"><i class="fa fa-pinterest-square fa-fw"></i>Pinterest</a>
-    </li>
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://youtube.com/user/*" target="_blank"><i class="fa fa-youtube-square fa-fw"></i>YouTube</a>
-    </li>
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://vimeo.com/*" target="_blank"><i class="fa fa-vimeo-square fa-fw"></i>Vimeo</a>
-    </li>
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://vine.co/*" target="_blank"><i class="fa fa-vine fa-fw"></i>Vine</a>
-    </li>
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="http://slideshare.net/*" target="_blank"><i class="fa fa-slideshare fa-fw"></i>SlideShare</a>
-    </li>
     
 
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/*" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://xing.com/profile/*" target="_blank"><i class="fa fa-xing-square fa-fw"></i>Xing</a>
-    </li>
+
     
 
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://reddit.com/user/*" target="_blank"><i class="fa fa-reddit-square fa-fw"></i>Reddit</a>
-    </li>
-    
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=%2a" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
+
     
 
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/yoshiharuyamashita" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
+
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https:////bitbucket.org/*" target="_blank"><i class="fa fa-bitbucket-square fa-fw"></i>Bitbucket</a>
-    </li>
+
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://stackoverflow.com/users/*" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
-    </li>
+
+    
+
+    
+
     
 
   </ul>
@@ -302,7 +226,7 @@
   </header>
 
   <p>
-  見出し Werckerの自動デプロイがうまくいかないので、暫定で手動デプロイする手順。 cd Sites hugo -t blackburn cd public git add -A git commit git push 参考URL: http://ureta.net/2015/05/hugo-on-windows/ http://tanksuzuki.com/post/hugo-github-pages-2/ http://tanksuzuki.com/post/hugo-github-pages-1/ ローカルで確認する方法 hugo server -t blackburn -D -w highchartsの表示テスト Highchartsを呼び出すテスト。 テンプレートのhead.htmlに以下を追加 &lt;!-- add my sciprt --&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;/js/highchartssetting.js&quot;&gt;&lt;/script&gt;
+  見出し Werckerの自動デプロイがうまくいかないので、暫定で手動デプロイする手順。 cd Sites hugo -t blackburn cd public git add -A git commit git push 参考URL: http://ureta.net/2015/05/hugo-on-windows/ http://tanksuzuki.com/post/hugo-github-pages-2/ http://tanksuzuki.com/post/hugo-github-pages-1/ ローカルで確認する方法 hugo server -t blackburn -D -w highchartsの表示テスト Highchartsを呼び出すテスト。 テンプレートのhead.htmlに以下を追加 &lt;!-- add my sciprt --&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;/js/highchartssetting.js&quot;&gt;&lt;/script&gt; テーブルのテスト 画像がうまく貼れていないので要調査。 http://webkaru.net/jquery-plugin/columns/ http://michaeleisenbraun.com/columns/
   </p>
 
   
