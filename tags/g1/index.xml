@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>いけむ競馬堂</title>
-    <link>http://ikem55.github.io/</link>
-    <description>Recent content on いけむ競馬堂</description>
+    <title>G1 on いけむ競馬堂</title>
+    <link>http://ikem55.github.io/tags/g1/</link>
+    <description>Recent content in G1 on いけむ競馬堂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Apr 2016 00:07:45 +0900</lastBuildDate>
-    <atom:link href="http://ikem55.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://ikem55.github.io/tags/g1/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>2016-05-01 天皇賞春予想</title>
@@ -108,78 +108,6 @@
 ×トーホウジャッカル&lt;/p&gt;
 
 &lt;p&gt;でどうでしょう。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>20160326test</title>
-      <link>http://ikem55.github.io/post/20160326test/</link>
-      <pubDate>Sat, 26 Mar 2016 10:30:06 +0900</pubDate>
-      
-      <guid>http://ikem55.github.io/post/20160326test/</guid>
-      <description>
-
-&lt;h2 id=&#34;テストコンテンツ:9c1fcad0baeb6fcc44b4a04e0b81d6e5&#34;&gt;テストコンテンツ&lt;/h2&gt;
-
-&lt;p&gt;コンテンツを作ってみる。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>http://ikem55.github.io/post/about/</link>
-      <pubDate>Fri, 18 Mar 2016 08:46:49 +0900</pubDate>
-      
-      <guid>http://ikem55.github.io/post/about/</guid>
-      <description>
-
-&lt;h2 id=&#34;見出し:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;見出し&lt;/h2&gt;
-
-&lt;p&gt;Werckerの自動デプロイがうまくいかないので、暫定で手動デプロイする手順。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd Sites
-hugo -t blackburn
-cd public
-git add -A
-git commit
-git push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;参考URL:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://ureta.net/2015/05/hugo-on-windows/&#34;&gt;http://ureta.net/2015/05/hugo-on-windows/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tanksuzuki.com/post/hugo-github-pages-2/&#34;&gt;http://tanksuzuki.com/post/hugo-github-pages-2/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tanksuzuki.com/post/hugo-github-pages-1/&#34;&gt;http://tanksuzuki.com/post/hugo-github-pages-1/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ローカルで確認する方法:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;ローカルで確認する方法&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo server -t blackburn -D -w
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;highchartsの表示テスト:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;highchartsの表示テスト&lt;/h2&gt;
-
-&lt;p&gt;Highchartsを呼び出すテスト。
-テンプレートのhead.htmlに以下を追加&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- add my sciprt --&amp;gt;
-&amp;lt;script src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script src=&amp;quot;http://code.highcharts.com/highcharts.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script src=&amp;quot;/js/highchartssetting.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div id=&#34;highcharts_container&#34; style=&#34;width:100%; height:400px;&#34;&gt;&lt;/div&gt;
-
-&lt;h2 id=&#34;テーブルのテスト:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;テーブルのテスト&lt;/h2&gt;
-
-&lt;p&gt;画像がうまく貼れていないので要調査。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://webkaru.net/jquery-plugin/columns/&#34;&gt;http://webkaru.net/jquery-plugin/columns/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://michaeleisenbraun.com/columns/&#34;&gt;http://michaeleisenbraun.com/columns/&lt;/a&gt;&lt;/p&gt;
-
-&lt;div id=&#34;columns_table&#34;&gt;&lt;/div&gt;
 </description>
     </item>
     
