@@ -6,8 +6,33 @@
     <description>Recent content in Posts on いけむ競馬堂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Apr 2016 00:07:45 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 May 2016 22:46:25 +0900</lastBuildDate>
     <atom:link href="http://ikem55.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2016050108030411_raceResult</title>
+      <link>http://ikem55.github.io/post/2016050108030411_raceResult/</link>
+      <pubDate>Mon, 02 May 2016 22:46:25 +0900</pubDate>
+      
+      <guid>http://ikem55.github.io/post/2016050108030411_raceResult/</guid>
+      <description>&lt;script async src=&#34;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;&gt;&lt;/script&gt;
+&lt;!-- いけむ競馬堂with hugo top --&gt;
+&lt;ins class=&#34;adsbygoogle&#34;
+     style=&#34;display:inline-block;width:728px;height:90px&#34;
+     data-ad-client=&#34;ca-pub-3751321197094352&#34;
+     data-ad-slot=&#34;3520427024&#34;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; class=&#34;tbl&#34;&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;input type=&#34;hidden&#34; value=&#34;2016050108030411_raceResult&#34; id=&#34;get_val&#34;&gt;&lt;/p&gt;
+
+&lt;div id=&#34;rap_graph&#34; style=&#34;width:100%; height:400px;&#34;&gt;&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>2016-05-01 天皇賞春予想</title>
@@ -122,6 +147,8 @@
 &lt;h2 id=&#34;テストコンテンツ:9c1fcad0baeb6fcc44b4a04e0b81d6e5&#34;&gt;テストコンテンツ&lt;/h2&gt;
 
 &lt;p&gt;コンテンツを作ってみる。&lt;/p&gt;
+
+&lt;div id=&#34;rap_graph&#34; style=&#34;width:100%; height:400px;&#34;&gt;&lt;/div&gt;
 </description>
     </item>
     
@@ -170,16 +197,6 @@ git push
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;div id=&#34;highcharts_container&#34; style=&#34;width:100%; height:400px;&#34;&gt;&lt;/div&gt;
-
-&lt;h2 id=&#34;テーブルのテスト:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;テーブルのテスト&lt;/h2&gt;
-
-&lt;p&gt;画像がうまく貼れていないので要調査。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://webkaru.net/jquery-plugin/columns/&#34;&gt;http://webkaru.net/jquery-plugin/columns/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://michaeleisenbraun.com/columns/&#34;&gt;http://michaeleisenbraun.com/columns/&lt;/a&gt;&lt;/p&gt;
-
-&lt;div id=&#34;columns_table&#34;&gt;&lt;/div&gt;
 </description>
     </item>
     
