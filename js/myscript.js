@@ -10,6 +10,10 @@ $(function () {
         console.log("tokubetuTouroku");
         setTokubetsuTouroku();
         break;
+      case "shussouUma":
+        console.log("shussouUma");
+        setShussouUma();
+        break;
       default:
         console.log("other");
         break;
@@ -83,6 +87,24 @@ $(function () {
       });
     }
 
+    function setShussouUma(){
+      $.getJSON('/js/json/' + getJsonFileName() + '.json',function(data){
+        var rp_array = [];
+        data.forEach(function(record){
+//          var hashObj = {country: record.nm,  name: record.ub , x: record.dax.x , y: record.dax.y , z: record.dax.z };
+          var hashObj = {name: record.nm , data: [[record.dax.x ,record.dax.y ,record.dax.z]] };
+            //, color: 'rgba(160,100,' + record.ub * 10 +  ' , 1)'};
+          rp_array.push(hashObj);
+         })
+        console.log(rp_array);
+        bubble_chart2_options.series = rp_array;
+//        bubble_chart_options.series = rp_array;
+
+        // var chart = new Highcharts.Chart(bubble_chart_options);
+        var chart = new Highcharts.Chart(bubble_chart2_options);
+      });
+    }
+
     // 読み込むjsonファイルの名前を取得
     function getJsonFileName(){
       return $("#get_val").val();
@@ -126,5 +148,102 @@ $(function () {
       },
       series: [{}]
     };
+
+
+
+    var bubble_chart_options = {
+      chart: {
+        renderTo: 'bubble_graph',
+          type: 'bubble',
+          plotBorderWidth: 1,
+          zoomType: 'xy'
+      },
+
+      legend: {
+          enabled: false
+      },
+
+      xAxis: {
+          gridLineWidth: 1,
+          title: {
+              text: 'テン偏差'
+          },
+      },
+
+      yAxis: {
+          startOnTick: false,
+          endOnTick: false,
+          title: {
+              text: '上がり偏差'
+          },
+          maxPadding: 0.2,
+      },
+
+      tooltip: {
+          useHTML: true,
+          headerFormat: '<table>',
+          pointFormat: '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
+              '<tr><th>テン偏差:</th><td>{point.x}g</td></tr>' +
+              '<tr><th>上がり偏差:</th><td>{point.y}g</td></tr>' +
+              '<tr><th>中盤偏差:</th><td>{point.z}%</td></tr>',
+          footerFormat: '</table>',
+          followPointer: true
+      },
+
+      plotOptions: {
+          series: {
+              dataLabels: {
+                  enabled: true,
+                  format: '{point.name}'
+              }
+          }
+      },
+
+      series: [{}]
+
+    };
+
+    var bubble_chart2_options = {
+      chart: {
+        renderTo: 'bubble_graph2',
+          type: 'bubble',
+          plotBorderWidth: 1,
+          zoomType: 'xy'
+      },
+
+      legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle',
+          borderWidth: 0
+      },
+
+      title: {
+          text: 'Highcharts bubbles with radial gradient fill'
+      },
+
+      xAxis: {
+          gridLineWidth: 1
+      },
+
+      yAxis: {
+          startOnTick: false,
+          endOnTick: false
+      },
+
+      tooltip: {
+          useHTML: true,
+          headerFormat: '<table>',
+          pointFormat: '<tr><th colspan="2"><h3>{point.name}</h3></th></tr>' +
+              '<tr><th>テン偏差:</th><td>{point.data}g</td></tr>' +
+              '<tr><th>上がり偏差:</th><td>{point.data [0]}g</td></tr>' +
+              '<tr><th>中盤偏差:</th><td>{point}%</td></tr>',
+          footerFormat: '</table>',
+          followPointer: true
+      },
+
+      series: [{}]
+    };
+
 
 });
