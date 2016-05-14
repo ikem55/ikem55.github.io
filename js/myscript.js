@@ -14,10 +14,45 @@ $(function () {
         console.log("shussouUma");
         setShussouUma();
         break;
+      case "kakoBestRace":
+        console.log("kakoBestRace");
+        setKakoBestRace();
+        break;
       default:
         console.log("other");
         break;
     }
+
+    function setKakoBestRace(){
+      $.getJSON('/js/json/' + getJsonFileName() + '.json', function(data){
+        data.forEach(function(record){
+          console.log(record);
+          var rp_array = [];
+          if(record.rr.rp.length != 0){
+            var hashObj = {name: record.ri.nm , data: record.rr.rp};
+            rp_array.push(hashObj);
+          }
+          line_chart_options.series = rp_array;
+          line_chart_options.chart.renderTo = record.rcId;
+          $('<div id ="' + record.rcId + '"></div><table id="table_' + record.rcId + '" cellpadding="0" cellspacing="0" border="0" class="tbl table table-striped table-bordered"><thead><tr><th>馬番</th><th>馬名</th><th>騎手</th><th>着順</th><th>人気</th><th>脚質</th></tr></thead><tbody></table>').appendTo('#appendDiv')
+          var chart = new Highcharts.Chart(line_chart_options);
+
+          $(record.ruj).each(function(){
+            console.log(this)
+            $('<tr>'+
+                '<td>'+this.ui.ub+'</td>'+
+                '<td>'+this.ui.um_nm+'</td>'+
+                '<td>'+this.ui.kn+'</td>'+
+                '<td>' + this.ur.ck + '</td>'+
+                '<td>' + this.ur.tn + '</td>'+
+                '<td>' + this.ur.ks + '</td>'+
+              '</tr>')
+            .appendTo('#table_' + record.rcId + ' tbody');
+          })
+        });
+      });
+    }
+
 
     function setTokubetsuTouroku(){
       $.getJSON('/js/json/' + getJsonFileName() + '.json', function(data){
