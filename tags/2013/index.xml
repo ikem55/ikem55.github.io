@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2013 on いけむ競馬堂</title>
+    <link>http://ikem55.github.io/tags/2013/</link>
+    <description>Recent content in 2013 on いけむ競馬堂</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Jun 2016 22:35:22 +0900</lastBuildDate>
+    <atom:link href="http://ikem55.github.io/tags/2013/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2013年印集計</title>
+      <link>http://ikem55.github.io/post/2013_year_summary/</link>
+      <pubDate>Fri, 17 Jun 2016 22:35:22 +0900</pubDate>
+      
+      <guid>http://ikem55.github.io/post/2013_year_summary/</guid>
+      <description>
+
+&lt;p&gt;&lt;input type=&#34;hidden&#34; value=&#34;resultAggregate&#34; id=&#34;contents_type&#34;&gt;
+&lt;input type=&#34;hidden&#34; value=&#34;2013&#34; id=&#34;get_val&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;総合成績:43d6e2ef79b6a39c2939f2cfede4cab1&#34;&gt;総合成績&lt;/h2&gt;
+
+&lt;div id=&#34;container_mark&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;本命馬成績:43d6e2ef79b6a39c2939f2cfede4cab1&#34;&gt;本命馬成績&lt;/h2&gt;
+
+&lt;h3 id=&#34;条件毎サマリー:43d6e2ef79b6a39c2939f2cfede4cab1&#34;&gt;条件毎サマリー&lt;/h3&gt;
+
+&lt;div id=&#34;container_shiba&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;container_dart&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;container_grade&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;container_joken&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;月毎サマリー:43d6e2ef79b6a39c2939f2cfede4cab1&#34;&gt;月毎サマリー&lt;/h3&gt;
+
+&lt;div id=&#34;summaryResult&#34; style=&#34;width:100%; height:800px;&#34;&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;重賞成績:43d6e2ef79b6a39c2939f2cfede4cab1&#34;&gt;重賞成績&lt;/h3&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; class=&#34;tbl table table-striped table-bordered&#34;&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

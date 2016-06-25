@@ -18,9 +18,694 @@ $(function () {
         console.log("kakoBestRace");
         setKakoBestRace();
         break;
+      case "resultAggregate":
+        console.log("resultAggregate");
+        setResultAggregateYear();
+        setResultAggregate();
+//        setTest();
+        break;
       default:
         console.log("other");
         break;
+    }
+
+    function setResultAggregateYear(){
+      $.getJSON('/js/json/' + getJsonFileName() + '_bymark.json', function(data){
+        $('#container_mark').highcharts({
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: '印毎成績'
+            },
+            xAxis: [{
+              categories:data.xData,
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                title: {
+                    text: '的中率',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                opposite: true
+
+            }, { // Secondary yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: '回収率',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                max:200,
+                plotLines:[{
+                  color:"red",
+                  width: 2,
+                  value:100
+                }]
+            }, { // Tertiary yAxis
+                gridLineWidth: 0,
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 80,
+                verticalAlign: 'top',
+                y: 55,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+            },
+            series: [{
+                name: data.datasets[0].name,
+                type: "line",  //data.datasets[0].type,
+                data: data.datasets[0].data,
+                tooltip: {
+                  valueSuffix: data.datasets[0].unit
+                }
+            }, {
+              name: data.datasets[1].name,
+              type: "column",  //data.datasets[1].type,
+              yAxis: 1,// data.datasets[1].yAxis,
+              data: data.datasets[1].data,
+                tooltip: {
+                  valueSuffix: data.datasets[1].unit
+                }
+            }, {
+              name: data.datasets[2].name,
+              type: "line", // data.datasets[2].type,
+              data: data.datasets[2].data,
+                tooltip: {
+                  valueSuffix: data.datasets[2].unit
+                }
+            }, {
+              name: data.datasets[3].name,
+              type: "column", // data.datasets[3].type,
+              yAxis: 1,// data.datasets[3].yAxis,
+              data: data.datasets[3].data,
+                tooltip: {
+                  valueSuffix: data.datasets[3].unit
+                }
+            }]
+        });
+      });
+      $.getJSON('/js/json/' + getJsonFileName() + '_bykeibajo_shiba.json', function(data){
+        $('#container_shiba').highcharts({
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: '芝コース成績'
+            },
+            xAxis: [{
+              categories:data.xData,
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                title: {
+                    text: '的中率',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                opposite: true
+
+            }, { // Secondary yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: '回収率',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                max:200,
+                plotLines:[{
+                  color:"red",
+                  width: 2,
+                  value:100
+                }]
+            }, { // Tertiary yAxis
+                gridLineWidth: 0,
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 80,
+                verticalAlign: 'top',
+                y: 55,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+            },
+            series: [{
+                name: data.datasets[0].name,
+                type: "line",  //data.datasets[0].type,
+                data: data.datasets[0].data,
+                tooltip: {
+                  valueSuffix: data.datasets[0].unit
+                }
+            }, {
+              name: data.datasets[1].name,
+              type: "column",  //data.datasets[1].type,
+              yAxis: 1,// data.datasets[1].yAxis,
+              data: data.datasets[1].data,
+                tooltip: {
+                  valueSuffix: data.datasets[1].unit
+                }
+            }, {
+              name: data.datasets[2].name,
+              type: "line", // data.datasets[2].type,
+              data: data.datasets[2].data,
+                tooltip: {
+                  valueSuffix: data.datasets[2].unit
+                }
+            }, {
+              name: data.datasets[3].name,
+              type: "column", // data.datasets[3].type,
+              yAxis: 1,// data.datasets[3].yAxis,
+              data: data.datasets[3].data,
+                tooltip: {
+                  valueSuffix: data.datasets[3].unit
+                }
+            }]
+        });
+      });
+
+      $.getJSON('/js/json/' + getJsonFileName() + '_bykeibajo_dart.json', function(data){
+        $('#container_dart').highcharts({
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: 'ダートコース成績'
+            },
+            xAxis: [{
+              categories:data.xData,
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                title: {
+                    text: '的中率',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                opposite: true
+
+            }, { // Secondary yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: '回収率',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                max:200,
+                plotLines:[{
+                  color:"red",
+                  width: 2,
+                  value:100
+                }]
+            }, { // Tertiary yAxis
+                gridLineWidth: 0,
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 80,
+                verticalAlign: 'top',
+                y: 55,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+            },
+            series: [{
+                name: data.datasets[0].name,
+                type: "line",  //data.datasets[0].type,
+                data: data.datasets[0].data,
+                tooltip: {
+                  valueSuffix: data.datasets[0].unit
+                }
+            }, {
+              name: data.datasets[1].name,
+              type: "column",  //data.datasets[1].type,
+              yAxis: 1,// data.datasets[1].yAxis,
+              data: data.datasets[1].data,
+                tooltip: {
+                  valueSuffix: data.datasets[1].unit
+                }
+            }, {
+              name: data.datasets[2].name,
+              type: "line", // data.datasets[2].type,
+              data: data.datasets[2].data,
+                tooltip: {
+                  valueSuffix: data.datasets[2].unit
+                }
+            }, {
+              name: data.datasets[3].name,
+              type: "column", // data.datasets[3].type,
+              yAxis: 1,// data.datasets[3].yAxis,
+              data: data.datasets[3].data,
+                tooltip: {
+                  valueSuffix: data.datasets[3].unit
+                }
+            }]
+        });
+      });
+
+      $.getJSON('/js/json/' + getJsonFileName() + '_byjoken.json', function(data){
+        $('#container_joken').highcharts({
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: '競走条件ごと成績'
+            },
+            xAxis: [{
+              categories:data.xData,
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                title: {
+                    text: '的中率',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                opposite: true
+
+            }, { // Secondary yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: '回収率',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                max:200,
+                plotLines:[{
+                  color:"red",
+                  width: 2,
+                  value:100
+                }]
+            }, { // Tertiary yAxis
+                gridLineWidth: 0,
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 80,
+                verticalAlign: 'top',
+                y: 55,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+            },
+            series: [{
+                name: data.datasets[0].name,
+                type: "line",  //data.datasets[0].type,
+                data: data.datasets[0].data,
+                tooltip: {
+                  valueSuffix: data.datasets[0].unit
+                }
+            }, {
+              name: data.datasets[1].name,
+              type: "column",  //data.datasets[1].type,
+              yAxis: 1,// data.datasets[1].yAxis,
+              data: data.datasets[1].data,
+                tooltip: {
+                  valueSuffix: data.datasets[1].unit
+                }
+            }, {
+              name: data.datasets[2].name,
+              type: "line", // data.datasets[2].type,
+              data: data.datasets[2].data,
+                tooltip: {
+                  valueSuffix: data.datasets[2].unit
+                }
+            }, {
+              name: data.datasets[3].name,
+              type: "column", // data.datasets[3].type,
+              yAxis: 1,// data.datasets[3].yAxis,
+              data: data.datasets[3].data,
+                tooltip: {
+                  valueSuffix: data.datasets[3].unit
+                }
+            }]
+        });
+      });
+
+      $.getJSON('/js/json/' + getJsonFileName() + '_bygrade.json', function(data){
+        $('#container_grade').highcharts({
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: 'グレード成績'
+            },
+            xAxis: [{
+              categories:data.xData,
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}%',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                title: {
+                    text: '的中率',
+                    style: {
+                        color: Highcharts.getOptions().colors[2]
+                    }
+                },
+                opposite: true
+
+            }, { // Secondary yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: '回収率',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                max:200,
+                plotLines:[{
+                  color:"red",
+                  width: 2,
+                  value:100
+                }]
+            }, { // Tertiary yAxis
+                gridLineWidth: 0,
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 80,
+                verticalAlign: 'top',
+                y: 55,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+            },
+            series: [{
+                name: data.datasets[0].name,
+                type: "line",  //data.datasets[0].type,
+                data: data.datasets[0].data,
+                tooltip: {
+                  valueSuffix: data.datasets[0].unit
+                }
+            }, {
+              name: data.datasets[1].name,
+              type: "column",  //data.datasets[1].type,
+              yAxis: 1,// data.datasets[1].yAxis,
+              data: data.datasets[1].data,
+                tooltip: {
+                  valueSuffix: data.datasets[1].unit
+                }
+            }, {
+              name: data.datasets[2].name,
+              type: "line", // data.datasets[2].type,
+              data: data.datasets[2].data,
+                tooltip: {
+                  valueSuffix: data.datasets[2].unit
+                }
+            }, {
+              name: data.datasets[3].name,
+              type: "column", // data.datasets[3].type,
+              yAxis: 1,// data.datasets[3].yAxis,
+              data: data.datasets[3].data,
+                tooltip: {
+                  valueSuffix: data.datasets[3].unit
+                }
+            }]
+        });
+      });
+
+    }
+
+    function setResultAggregate(){
+     // Get the data. The contents of the data file can be viewed at
+     // https://github.com/highcharts/highcharts/blob/master/samples/data/activity.json
+    // $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=activity.json&callback=?', function (activity) {
+     $.getJSON('/js/json/' + getJsonFileName() + '_bymonth.json', function (activity) {
+         $.each(activity.datasets, function (i, dataset) {
+           // Add X values
+           dataset.data = Highcharts.map(dataset.data, function (val, j) {
+               return [activity.xData[j], val];
+           });
+
+           $('<div class="chart">')
+               .appendTo('#summaryResult')
+               .highcharts({
+                   chart: {
+                       marginLeft: 40, // Keep all charts left aligned
+                       spacingTop: 20,
+                       spacingBottom: 20,
+                       height:200
+                   },
+                   title: {
+                       text: dataset.name,
+                       align: 'left',
+                       margin: 0,
+                       x: 30
+                   },
+                   credits: {
+                       enabled: false
+                   },
+                   legend: {
+                       enabled: false
+                   },
+                   xAxis: {
+                       crosshair: true,
+                       categories:activity.xData
+                   },
+                   yAxis: {
+                       title: {
+                           text: null
+                       }
+                   },
+                   tooltip: {
+                       positioner: function () {
+                           return {
+                               x: this.chart.chartWidth - this.label.width, // right aligned
+                               y: -1 // align to title
+                           };
+                       },
+                       borderWidth: 0,
+                       backgroundColor: 'none',
+                       pointFormat: '{point.y}',
+                       headerFormat: '',
+                       shadow: false,
+                       style: {
+                           fontSize: '18px'
+                       },
+                       valueDecimals: dataset.valueDecimals
+                   },
+                   series: [{
+                       data: dataset.data,
+                       name: dataset.name,
+                       type: dataset.type,
+                       color: Highcharts.getOptions().colors[i],
+                       fillOpacity: 0.3,
+                       tooltip: {
+                           valueSuffix: ' ' + dataset.unit
+                       }
+                   }]
+               });
+         });
+     });
+
+     $.getJSON('/js/json/' + getJsonFileName() + '_resultlist.json', function(data){
+       $('<thead><tr><th>印</th><th>着</th><th>Date</th><th>場所</th><th>トラ</th><th>距離</th><th>レース名</th><th>馬名</th><th>人</th><th>脚</th></tr></thead><tbody>')
+       .appendTo('table.tbl');
+       data.forEach(function(record){
+         $('<tr>'+
+         '<td>' + record.umaMark + '</td>' +
+         '<td class="' + setLabel(record.chakujun) + '">' + record.chakujun + '</td>' +
+         '<td>' + record.yearDate + '</td>' +
+         '<td>' + record.kaisaiBasho + '</td>' +
+         '<td>' + record.trackName + '</td>' +
+         '<td>' + record.kyori + '(' + record.babaName + ')' + '</td>' +
+         '<td>' + record.raceName + '(' + record.gradeName + ')</td>' +
+         '<td>' + record.umaName + '</td>' +
+         '<td class="' + setLabel(record.ninki) + '">' + record.ninki + '</td>' +
+         '<td>' + record.kyakushitsu + '</td>' +
+         '</tr>')
+         .appendTo('table.tbl tbody');
+       })
+     })
+
+     function setLabel(val){
+       var returnVal;
+        switch (val) {
+          case 1:
+          returnVal = "danger";
+          break;
+        case 2:
+          returnVal = "warning";
+          break;
+        case 3:
+          returnVal = "info";
+          break;
+        default:
+          returnVal = "";
+       }
+       return returnVal;
+     }
+    }
+
+    function setTest(){
+      $.getJSON('/js/json/' + getJsonFileName() + '_bykeibajo_shiba.json', function(data){
+
+        $('#container_test').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '競馬場別回収率'
+        },
+        xAxis: {
+            categories:data.xData,
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '回収率(%)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: data.datasets[0].name,
+            data: data.datasets[0].data
+          }, {
+            name: data.datasets[1].name,
+            data: data.datasets[1].data
+          }, {
+            name: data.datasets[2].name,
+            data: data.datasets[2].data
+          }, {
+            name: data.datasets[3].name,
+            data: data.datasets[3].data
+        }]
+      });
+    });
     }
 
     function setKakoBestRace(){
