@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>中間集計 on いけむ競馬堂</title>
+    <link>http://ikem55.github.io/tags/%E4%B8%AD%E9%96%93%E9%9B%86%E8%A8%88/</link>
+    <description>Recent content in 中間集計 on いけむ競馬堂</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Jun 2016 22:35:22 +0900</lastBuildDate>
+    <atom:link href="http://ikem55.github.io/tags/%E4%B8%AD%E9%96%93%E9%9B%86%E8%A8%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2016年印中間集計</title>
+      <link>http://ikem55.github.io/post/2016_year_summary_middle/</link>
+      <pubDate>Fri, 17 Jun 2016 22:35:22 +0900</pubDate>
+      
+      <guid>http://ikem55.github.io/post/2016_year_summary_middle/</guid>
+      <description>
+
+&lt;p&gt;&lt;input type=&#34;hidden&#34; value=&#34;resultAggregate&#34; id=&#34;contents_type&#34;&gt;
+&lt;input type=&#34;hidden&#34; value=&#34;2016&#34; id=&#34;get_val&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;2016年も上半期が終わったので、印の中間集計。昨年の下期から馬王様による自動予想に手を付けたけど、結果は惨敗。まだこの分野に手を出すほど整備ができてなかったのはわかっていたけど、ちょうど馬王様開始した前の週に阪神ダートのエニフSで10番人気ー4番人気ー8番人気の決着を◎▲○という奇跡的な印で当てた（けど開始していないので馬券は買っていない）強烈な体験から、かなり引きずってしまったのがとても悔やまれる。まあ、勘を取り戻すのに時間がかかったけど、6月はなんとかV字回復して、本命馬の単複回収率を１００％超えれたので良かった。ありがとうソルヴェイグ。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、2015年も下期の成績悪かったのは、馬王様の影響がないこともない。夏競馬は少し体制を整える方に重きを置く予定。
+それにしても、今年のG1の成績はひどかったなぁ。下期は挽回したいですね。。。&lt;/p&gt;
+
+&lt;h2 id=&#34;総合成績:3924147b2bf67826ad1c5b7f14a59a39&#34;&gt;総合成績&lt;/h2&gt;
+
+&lt;div id=&#34;container_mark&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;本命馬成績:3924147b2bf67826ad1c5b7f14a59a39&#34;&gt;本命馬成績&lt;/h2&gt;
+
+&lt;h3 id=&#34;条件毎サマリー:3924147b2bf67826ad1c5b7f14a59a39&#34;&gt;条件毎サマリー&lt;/h3&gt;
+
+&lt;div id=&#34;container_shiba&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;container_dart&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;container_grade&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;container_joken&#34; style=&#34;width:100%; height:150;&#34;&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;月毎サマリー:3924147b2bf67826ad1c5b7f14a59a39&#34;&gt;月毎サマリー&lt;/h3&gt;
+
+&lt;div id=&#34;summaryResult&#34; style=&#34;width:100%; height:800px;&#34;&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;重賞成績:3924147b2bf67826ad1c5b7f14a59a39&#34;&gt;重賞成績&lt;/h3&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; class=&#34;tbl table table-striped table-bordered&#34;&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
